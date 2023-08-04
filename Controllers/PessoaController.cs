@@ -40,7 +40,11 @@ namespace Sistema.Controllers
             try
             {
                 if (ModelState.IsValid)
-                {                    
+                {
+                    //Entity Framework
+                    //var createPessoas = _pessoaRepositorio.Adicionar(pessoa);
+
+                    //API
                     var create = CreateAPI(pessoa);
                     TempData["MensagemSucesso"] = "Cadastrado com sucesso!";
                     return RedirectToAction("Index");
